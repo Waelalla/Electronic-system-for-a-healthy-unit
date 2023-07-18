@@ -1,0 +1,370 @@
+{% extends 'base copy.html' %}
+{% load static %}
+{% block التطعيمات %}
+    <link rel="stylesheet" href="{% static 'table.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'footer.css'%}">
+
+{% endblock  %}
+{% block content %}
+
+<div class="section-container">
+
+    <div class="card text-white bg-info mb-3 " style="margin-top: 20px; border-radius:15px;
+     ">
+      <div class="card-header " style="background-color: rgba(39, 104, 161, 0.666);text-align: center;">
+        ما هو التطعيم (اللقاح)
+      </div>
+      <div class="card-body row justify-content-center">
+        <img class="col-lg-4 col-md-6 col-sm-6 mb-3" src="{% static 'images/lll.jpg'%}" alt="" style="width: 200px;height:200px;">
+        <div class="cont col-lg-8 col-md-6 col-sm-12">
+          <p class="card-text text-lg-right text-sm-center" style="direction: rtl;">التطعيم طريقة بسيطة ومأمونة وفعالة
+            لحماية
+            الأشخاص من الأمراض الضارة <br> قبل التعرض لها. ويستخدم التطعيم وسائل الدفاع الطبيعية لجسمك لبناء القدرة على
+            مقاومة أمراض محددة، فضلا عن أنه يقوّي جهازك المناعي</p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-container">
+    <div class="card text-white bg-info mb-3 ">
+      <div class="card-header" style="background-color: rgba(39, 104, 161, 0.666);text-align: center;"> كيف يعمل اللقاح
+      </div>
+      <div class="card-body row justify-content-center">
+        <img class="col-lg-4 col-md-6 col-sm-6 mb-3" src="{% static 'images/v2.jpg'%}" alt=""
+          style="width: 250px;height:250px;direction: rtl;">
+        <div class="cont col-lg-8 col-md-6 col-sm-12">
+          <p class="card-text text-lg-right text-sm-center" style="direction: rtl;">
+            اللقاحات تحد من مخاطر الإصابة بالمرض من خلال ارتكازها على وسائل الدفاع الطبيعية لجسمك لبناء القدرة على
+            حمايته. فعندما تتلقى اللقاح، تكون هناك استجابة من جهازك المناعي،
+            <br>
+            إذ إنه:
+
+
+            يتعرف على الجرثومة الغازية، مثل الفيروس أو البكتيريا.
+            <br>
+            ينتج الأضداد.
+            <br>
+            الأضداد هي عبارة عن بروتينات ينتجها الجهاز المناعي بشكل طبيعي لمكافحة المرض.
+
+            يتذكر المرض وكيفية محاربته. إذا تعرضتَ للجرثومة في المستقبل، فسيكون بوسع جهازك المناعي تدميرها بسرعة قبل أن
+            تشعر بالاعتلال.
+            <br>
+            وبناء على ذلك، فإن اللقاح هو وسيلة آمنة وذكية لتوليد استجابة مناعية في الجسم، دون أن يسبب المرض.
+            <br>
+
+            وتتمتع أجهزتنا المناعية بالقدرة على التذكّر. فبمجرد أن نتعرض لجرعة أو عدة جرعات من اللقاح، نظل عادة محميين
+            من المرض لسنوات أو عقود أو حتى مدى الحياة. هذا ما يجعل اللقاحات فعالة للغاية، إذ إنها تهدف أولا إلى وقايتنا
+            من المرض قبل اللجوء إلى العلاج بعد الإصابة به.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="section-container">
+    <div class="card text-white bg-info mb-3" style="border-radius:15px;
+    ">
+      <div class="card-header" style="background-color: rgba(39, 104, 161, 0.666);text-align: center;">
+        ما هي الامراض التي تقي منها اللقاحات
+      </div>
+      <div class="card-body row justify-content-center">
+        <img class="col-lg-4 col-md-6 col-sm-6 mb-3" src="{% static 'images/v3.png'%}" alt="" style="width: 300px;height:200px;">
+        <div class="cont col-lg-8 col-md-6 col-sm-12">
+          <p class="card-text text-lg-right text-sm-center" style="direction: rtl;">
+            تحمي اللقاحات من أمراض مختلفة عديدة، بما في ذلك:
+            <br>
+            سرطان عنق الرحم
+            /
+            الكوليرا
+            /
+            الدفتيريا (الخُناق)
+            /
+            التهاب الكبد البائي
+            /
+            الأنفلونزا
+            /
+            الحصبة
+            /
+            التهاب السحايا
+            /
+            النُكاف
+            /
+            الشاهوق
+            /
+            الالتهاب الرئوي
+            /
+            شلل الأطفال
+            /
+            الحصبة الألمانية/
+            داء الكلب
+            /
+            الفيروسة العجلية
+            /
+            الكزاز
+            /
+            التيفود
+            /
+            الحُماق
+            /
+            الحمى الصفراء
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="container table-container" style="text-align: center; margin: auto; ">
+    <div class="" style="color: rgba(29, 76, 118, 0.666);text-align: center;margin-top: 160px;">
+      <h4>
+        جدول تطعيمات الاطفال الروتينية (الاجبارية)
+      </h4>
+    </div>
+    <div class="doeses-table">
+      <table border="4"
+        style="width:100%;padding: 20px; margin-top: 20px;direction:rtl ;text-align: center;border-color: rgb(158, 231, 238);border-radius: 2px;background-color: rgb(16, 140, 168);color: white; ">
+        <thead>
+          <tr>
+            <th>العمر</th>
+            <th>كيفية الاعطاء</th>
+            <th>كمية الطعم</th>
+            <th>المرض</th>
+            <th>الطعم</th>
+            <th>الجرعة</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>عند الميلاد</td>
+            <td>علي اللسان بالفم</td>
+            <td> نقطتان</td>
+            <td>شلل الاطفال</td>
+            <td>سابين</td>
+            <td>الجرعة الصفرية</td>
+          </tr>
+          <tr>
+            <td>عند الميلاد</td>
+            <td> حقنا في الجلد بالكتف اليسري</td>
+            <td> 0.05 ملليتر</td>
+            <td> الدرن</td>
+            <td>بي سي جي</td>
+            <td> جرعه ال بي.سي.جي</td>
+          </tr>
+
+          <tr>
+            <th>عند الميلاد</th>
+            <th> حقن بالعضل في الجزء الخارجي من العضلة الامامية ب الفخذ الايمن</th>
+            <th> 0.5 ملليتر</th>
+            <th>الالتهاب الكبدي ب</th>
+            <th>طعم الكبدي ب</th>
+            <th>الجرعة الصفرية (جرعة الميلاد)</th>
+          </tr>
+
+          <tr>
+            <th> شهرين </th>
+            <th> علي اللسان بالفم</th>
+            <th> نقطتان </th>
+            <th> شلل الاطفال <br>والتيتانوس<br>والكبدي ب <br> والانفلونزا البكتيرية <br>نمط ب </th>
+            <th> سابين </th>
+            <th rowspan="2">الجرعة الاولي</th>
+          </tr>
+
+          <tr>
+            <th>شهرين </th>
+            <th> حقنا بالعضل بالفخذ اليمني</th>
+            <th> 0.5 ملليتر </th>
+            <th>الدفتريا والسعال <br>والتيتانوس<br>والكبدي ب <br> والانفلونزا البكتيرية <br>نمط ب </th>
+            <th>الخماسي</th>
+            <th></th>
+          </tr>
+
+
+          <tr>
+            <th>4 شهور</th>
+            <th>علي اللسان بالفم </th>
+            <th> نقطتان</th>
+            <th>شلل الاطفال</th>
+            <th>سابين</th>
+            <th rowspan="2">الجرعة الثانية</th>
+          </tr>
+          <tr>
+            <th>4 شهور</th>
+            <th>حقنا بالعضل بالفخذ اليمني </th>
+            <th> 0.5 ملليتر </th>
+            <th>الدفتريا والسعال <br>والتيتانوس<br>والكبدي ب <br> والانفلونزا البكتيرية <br>نمط ب </th>
+            <th>الخماسي</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>6 شهور</th>
+            <th>علي اللسان بالفم </th>
+            <th> نقطتان</th>
+            <th>شلل الاطفال</th>
+            <th>سابين</th>
+            <th rowspan="2">الجرعة الثالثة</th>
+          </tr>
+          <tr>
+            <th>6 شهور</th>
+            <th>حقنا بالعضل بالفخذ اليمني </th>
+            <th> 0.5 ملليتر </th>
+            <th>الدفتريا والسعال <br>والتيتانوس<br>والكبدي ب <br> والانفلونزا البكتيرية <br>نمط ب </th>
+            <th>الخماسي</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>6 شهور</th>
+            <th>علي اللسان بالفم </th>
+            <th> نقطتان</th>
+            <th>شلل الاطفال</th>
+            <th>سابين</th>
+            <th>الجرعة الرابعة</th>
+          </tr>
+          <tr>
+            <th>12 شهر </th>
+            <th>علي اللسان بالفم </th>
+            <th> نقطتان</th>
+            <th>شلل الاطفال</th>
+            <th>سابين</th>
+            <th rowspan="2">جرعة السنة </th>
+          </tr>
+          <tr>
+            <th>12 شهر</th>
+            <th> حقنا تحت الجلد بالذراع اليمني</th>
+            <th> 0.5 ملليتر </th>
+            <th>الحصبه والنكاف والحصبة الالمانية</th>
+            <th>ام ام ار</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>18 شهر </th>
+            <th>علي اللسان بالفم </th>
+            <th> نقطتان</th>
+            <th>شلل الاطفال</th>
+            <th>سابين</th>
+            <th rowspan="3">الجرعة المنشطة</th>
+          </tr>
+          <tr>
+            <th>18 شهر</th>
+            <th> حقنا بالعضل بالفخذ اليسري</th>
+            <th> 0.5 ملليتر </th>
+            <th> الدفترياوالسعال والتيتانوس</th>
+            <th> الثلاثي</th>
+            <th></th>
+          </tr>
+          <th>18 شهر</th>
+          <th> حقنا تحت الجلد بالذراع اليمني</th>
+          <th> 0.5 ملليتر </th>
+          <th>الحصبه والنكاف والحصبة الالمانية</th>
+          <th>ام ام ار</th>
+          <th></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+  <div class="row align-items-center justify-content-center" style="margin-top: 100px;">
+    <div class="radar col-lg-3 col-md-4 col-sm-6">
+      <div class="mb-3 bg-info"
+        style="background-color:rgba(120, 172, 218, 0.666) ; text-align: center;color:white;border-radius: 35px;">
+        <div class="card-header bg-transparent border-success">المسئول عن القسم</div>
+        <input type="text" placeholder="المراقب الصحي ا/ احمد " disabled style="text-align: center;">
+        <div class="card-body text-success">
+          <img src="{% static 'images/v10.jpg'%}" style="width:100%;height:180px;">
+        </div>
+        <div class="card-footer bg-transparent border-success">قسم التطعيمات</div>
+        <div class="card-footer bg-transparent border-success">وحدة اويش الحجر الصحية</div>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-7 col-sm-12">
+      <div class="card  text-white bg-info mb-3 " style="margin:0">
+        <div class="card-header" style="background-color: rgba(39, 104, 161, 0.666);text-align: center;">
+          حفظ اللقاح بالاماكن المخصصة
+        </div>
+        <div class="card-body row justify-content-between gallery">
+          <img class="col-lg-3 col-md-6 col-xs-6 mb-2" src="{% static 'images/ؤ.jpg'%}" alt="" style="height:200px;">
+          <img class="col-lg-3 col-md-6 col-xs-6 mb-2" src="{% static 'images/c6.jpg'%}" alt=""
+            style="height:200px;object-fit: cover;">
+          <img class="col-lg-3 col-md-6 col-xs-6 mb-2" src="{% static 'images/c7.jpg'%}" alt=""
+            style="height:200px;object-fit: cover;">
+          <img class="col-lg-3 col-md-6 col-xs-6 mb-2" src="{% static 'images/c5.jpg'%}" alt=""
+            style="height:200px;object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  < 
+    <!-- بدايه الفوتر -->
+    <footer >
+      <div class="container p-4 bg-info" style="border-radius: 20px;">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0" dir="rtl">
+            <h5 class="" style="color:white;"> توعيات </h5>
+            <ul class="foott1" style="color:white;">
+              <li><a href="https://www.egypt.gov.eg/services/listServicesCategory.aspx?ID=1296&section=serviceproviders"
+                  style="color:rgb(226, 240, 245);">وزاره الصحه</a></li>
+              <li><a
+                  href="https://www.who.int/ar/news-room/questions-and-answers/item/vaccines-and-immunization-what-is-vaccination"
+                  style="color:rgb(226, 240, 245);">التطعيمات</a></li>
+              <li><a href="https://www.moh.gov.sa/Support/FAQ/Pages/default.aspx"
+                  style="color:rgb(226, 240, 245);">الاساله الشائعه</a></li>
+              <li><a href="https://www.unicef.org/egypt/ar/stories/national-immunization-campaign-against-polio"
+                  style="color:rgb(226, 240, 245);">الحملات القوميه ضد شلل الاطفال</a></li>
+              <li><a href="" style="color:rgb(226, 240, 245);">فيس بوك</a></li>
+              <li><a
+                  href="https://www.google.com/maps/place/%D9%85%D8%B1%D9%83%D8%B2+%D8%A7%D8%B3%D8%B1%D9%87+%D8%B7%D8%A8+%D8%A7%D9%88%D9%8A%D8%B4+%D8%A7%D9%84%D8%AD%D8%AC%D8%B1%E2%80%AD/@31.010662,31.3197579,15z/data=!4m5!3m4!1s0x0:0x2998f7bdd9e7b772!8m2!3d31.0106514!4d31.3197479"
+                  style="color:rgb(226, 240, 245);">الموقع </a></li>
+            </ul>
+          </div>
+    
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0" dir="rtl">
+            <h5 class="" style="color:rgb(226, 240, 245);">نصائح </h5>
+            <ul class="foott2" style="color:rgb(226, 240, 245);">
+              <li><a href="https://egcovac.mohp.gov.eg/#/home" style="color:rgb(226, 240, 245);">وزاره الصحه لتلقي لقاح
+                  فيروس كورونا</a></li>
+              <li> <a href="https://www.mayoclinic.org/ar/diseases-conditions/hepatitis-b/symptoms-causes/syc-20366802"
+                  style="color:rgb(226, 240, 245);">الالتهاب الكبدي</a></li>
+              <li><a
+                  href="https://www.moh.gov.sa/HealthAwareness/EducationalContent/Diseases/Infectious/Pages/default.aspx"
+                  style="color:rgb(226, 240, 245);">الامراض المعديه</a></li>
+              <li><a
+                  href="https://together.stjude.org/ar-sa/care-support/immunity-illness-infection/preventing-infection.html"
+                  style="color:rgb(226, 240, 245);">الوقايه من العدوي</a></li>
+              <li><a href="https://www.moh.gov.bh/Services/EnvironmentalHealth" style="color:rgb(226, 240, 245);">صحه
+                  البيئه</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center container p-3 mt-0"
+        style="background-color:   rgb(31, 108, 141);color: white ;border-radius: 15px;width:100%">
+        © 2023 :
+        <a class="" href="https://mdbootstrap.com/" style="color: white;margin-right:20px ;">مركز طب الاسره</a>
+      </div>
+    </footer>
+      <!--نهايه الفوتر -->
+    
+  </div>
+
+
+
+
+
+
+
+    
+  <script src="{% static 'js/popper.min.js'%}"></script>
+  <script src="{% static 'js/jquery-3.6.3.min.js'%}"></script>
+      <script src="{% static 'js/bootstrap.js'%}"></script>
+        <script src="{% static 'mm.js'%}"></script>
+        <script src="{% static 'page.js'%}"></script>
+        <script src="{% static 'main.js'%}"></script>
+        <script src="{% static 'logd.js'%}"></script>
+        <script src="{% static 'page.js'%}"></script>
+
+
+
+  <hr>
+{% endblock  %} 

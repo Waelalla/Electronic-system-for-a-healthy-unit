@@ -1,0 +1,166 @@
+{% extends 'base copy.html' %}
+{% load static %}
+
+{% block services_Detail %}
+<link rel="stylesheet" href="{% static 'Department_detail.html.css'%}">
+<link rel="stylesheet" href="{% static 'footer.css'%}">
+
+{% endblock  %}
+{% block content %}
+
+             <br>
+       
+  
+
+
+
+
+                <div id="head2" style="color: white; font-family: cairo;background-color: rgba(68, 147, 216, 0.666); height:155px;" >
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <img class="" src="{{services.dep_imag.url}}" alt="" style="width: 150px;height:150px;">
+                        <h4 style="background-color: rgb(14, 90, 144);padding:50px 20px 12px 20px ;position: absolute;top: 0.2px;right: 0px; border-radius: 35px; height:155px;width: 550px;text-align: center;">
+                            {{services.dep_name}}
+                        </h4>
+                      </div>
+
+                    </div>
+                    <div class="card text-white bg-info mb-3" style="margin-top: 20px;margin-right: 446px; width: 900px;border-radius:15px; " >
+                        <div class="card-header"dir="rtl" style="background-color: rgba(14, 81, 140, 0.666)"> {{dep.Thread_header}}  </div>
+                        <div class="card-body">
+                            <img class="" src="{{services.the_topic_imag.url}}" alt="" style="width: 250px;height:250px;">
+                            <div class="cont">
+                                <div class="text form-row">
+                                    {{services.the_topic}}
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="nadwa" dir="rtl" style="display:flex ;">
+                        <div class ="nadwa-img-ltr">   
+                    
+                            <img src="{{services.the_topic_imag2.url}}"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"></img>
+                                </div>    
+                        <div class="nadwa-desc">
+                    <h2>  {{services.Thread_header2}} </h2>
+                    <div class="text form-row">
+                        {{services.the_topic2}}
+                      </div>
+                    </div>
+                     </section>
+                
+                
+                    <div class="card text-white bg-info mb-3" style="margin-top: 20px;margin-right: 446px; width: 900px;border-radius:15px; " >
+                        <div class="card-header"dir="rtl">  {{services.Thread_header3}}  </div>
+                        <div class="card-body">
+                            <img class="" src="{{services.the_topic_imag3.url}}" alt="" style="width: 250px;height:250px;direction: rtl;">
+                            <div class="cont">
+                                <div class="text form-row">
+                                    {{services.the_topic3}}
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                
+                    <section class="nadwa" dir="rtl" style="display:flex ;">
+                        <div class ="nadwa-img-rtl">   
+                    
+                            <img src="{{services.the_topic_imag4.url}}"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"></img>
+                                </div>    
+                        <div class="nadwa-desc">
+                    <h2> {{services.Thread_header4}} </h2>
+                    <div class="text form-row">
+                        {{services.the_topic4}}
+                      </div>
+                    </div>
+                     </section>
+                
+                     <div class="card text-white bg-info mb-3" style="margin-top: 20px;margin-right: 446px; width: 900px;border-radius:15px; " >
+                        <div class="card-header"dir="rtl"> {{services.Thread_header5}} </div>
+                        <div class="card-body">
+                            <img class="" src="{{services.the_topic_imag5.url}}" alt="" style="width: 250px;height:250px;">
+                            <div class="cont">                              
+                                <div class="text form-row">
+                                    {{services.the_topic5}}
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+
+    </section>
+
+
+    
+<!-- بدايه الفوتر -->
+<footer >
+    <div class="container p-4 bg-info" style="border-radius: 20px;">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0" dir="rtl">
+          <h5 class="" style="color:white;"> توعيات </h5>
+          <ul class="foott1" style="color:white;">
+            <li><a href="https://www.egypt.gov.eg/services/listServicesCategory.aspx?ID=1296&section=serviceproviders"
+                style="color:rgb(226, 240, 245);">وزاره الصحه</a></li>
+            <li><a
+                href="https://www.who.int/ar/news-room/questions-and-answers/item/vaccines-and-immunization-what-is-vaccination"
+                style="color:rgb(226, 240, 245);">التطعيمات</a></li>
+            <li><a href="https://www.moh.gov.sa/Support/FAQ/Pages/default.aspx"
+                style="color:rgb(226, 240, 245);">الاساله الشائعه</a></li>
+            <li><a href="https://www.unicef.org/egypt/ar/stories/national-immunization-campaign-against-polio"
+                style="color:rgb(226, 240, 245);">الحملات القوميه ضد شلل الاطفال</a></li>
+            <li><a href="" style="color:rgb(226, 240, 245);">فيس بوك</a></li>
+            <li><a
+                href="https://www.google.com/maps/place/%D9%85%D8%B1%D9%83%D8%B2+%D8%A7%D8%B3%D8%B1%D9%87+%D8%B7%D8%A8+%D8%A7%D9%88%D9%8A%D8%B4+%D8%A7%D9%84%D8%AD%D8%AC%D8%B1%E2%80%AD/@31.010662,31.3197579,15z/data=!4m5!3m4!1s0x0:0x2998f7bdd9e7b772!8m2!3d31.0106514!4d31.3197479"
+                style="color:rgb(226, 240, 245);">الموقع </a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0" dir="rtl">
+          <h5 class="" style="color:rgb(226, 240, 245);">نصائح </h5>
+          <ul class="foott2" style="color:rgb(226, 240, 245);">
+            <li><a href="https://egcovac.mohp.gov.eg/#/home" style="color:rgb(226, 240, 245);">وزاره الصحه لتلقي لقاح
+                فيروس كورونا</a></li>
+            <li> <a href="https://www.mayoclinic.org/ar/diseases-conditions/hepatitis-b/symptoms-causes/syc-20366802"
+                style="color:rgb(226, 240, 245);">الالتهاب الكبدي</a></li>
+            <li><a
+                href="https://www.moh.gov.sa/HealthAwareness/EducationalContent/Diseases/Infectious/Pages/default.aspx"
+                style="color:rgb(226, 240, 245);">الامراض المعديه</a></li>
+            <li><a
+                href="https://together.stjude.org/ar-sa/care-support/immunity-illness-infection/preventing-infection.html"
+                style="color:rgb(226, 240, 245);">الوقايه من العدوي</a></li>
+            <li><a href="https://www.moh.gov.bh/Services/EnvironmentalHealth" style="color:rgb(226, 240, 245);">صحه
+                البيئه</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center container p-3 mt-0"
+      style="background-color:   rgb(31, 108, 141);color: white ;border-radius: 15px;width:100%">
+      © 2023 :
+      <a class="" href="https://mdbootstrap.com/" style="color: white;margin-right:20px ;">مركز طب الاسره</a>
+    </div>
+  </footer>
+    <!--نهايه الفوتر -->
+  
+  </div>
+
+
+
+
+
+
+
+    
+  <script src="{% static 'js/popper.min.js'%}"></script>
+  <script src="{% static 'js/jquery-3.6.3.min.js'%}"></script>
+      <script src="{% static 'js/bootstrap.js'%}"></script>
+        <script src="{% static 'mm.js'%}"></script>
+        <script src="{% static 'page.js'%}"></script>
+        <script src="{% static 'main.js'%}"></script>
+        <script src="{% static 'logd.js'%}"></script>
+        <script src="{% static 'page.js'%}"></script>
+
+    {% endblock  %} 
+
+

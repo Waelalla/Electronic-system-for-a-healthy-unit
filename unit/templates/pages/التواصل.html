@@ -1,0 +1,145 @@
+{% extends 'base copy.html' %}
+{% load static %}
+{% block التواصل %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+<link rel="stylesheet" href="{% static 'cont.css'%}">
+<link rel="stylesheet" href="{% static 'footer.css'%}">
+
+
+{% endblock  %}
+{% block content %}
+<section id="call" style="margin-top:80px ;">
+    <div class="about bg-info">
+      <div class="row">
+
+        <div class="card-body">
+
+          <div class="row justify-content-around">
+            
+            <img class="col-4" src="{% static 'images/call.png'%}" width="300px" height="300px"
+            style="border-radius: 15px;">
+            <form class="col-5">
+              <h5 class="card-title">اتصل بنا </h5>
+              <div class="form-group">
+                <label for="exampleInputEmail1">البريد الالكتروني</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div> -->
+                <div class="form-group">
+                  <label>اترك رساله</label>
+                  <textarea class="form-control"></textarea>
+                </div>
+                <div class="form-group form-check" dir="rtl">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1" style="margin-right:20px ;">تاكيد</label>
+                </div>
+<button type="submit" class="btn"
+style="color: white;background-color: rgba(39, 104, 161, 0.666);">ارسال</button>
+</form>
+</div> </div> </div></div></section>
+
+
+
+
+
+
+
+<div class="row align-items-center justify-content-center" style="margin-top: 20px;">
+<div class="radar col-lg-3 col-md-4 col-sm-6">
+  <div class="mb-3 bg-info"
+    style="background-color:rgba(120, 172, 218, 0.666) ; text-align: center;color:white;border-radius: 35px;">
+    <div class="card-header bg-transparent border-success">  مديرة الوحدة</div>
+    <input type="text" placeholder=" د/ سميحة  " disabled style="text-align: center;">
+    <div class="card-body text-success">
+      <img src="{% static 'images/v10.jpg'%}" style="width:100%;height:180px;">
+    </div>
+    <div class="card-footer bg-transparent border-success"> رقم التواصل 23232325</div>
+    <div class="card-footer bg-transparent border-success">   مواعيد العمل من 8 ص الي 2 ظهرا</div>
+    <!-- <div class="card-footer bg-transparent border-success"> </div>
+     -->
+    <div class="card-footer bg-transparent border-success">وحدة اويش الحجر الصحية</div>
+ 
+</div>
+</div>
+<div class="col-lg-8 col-md-7 col-sm-12">
+  <div class="card  text-white bg-info mb-3 " style="margin:0;">
+    <!-- <div class="card-header" style="background-color: rgba(39, 104, 161, 0.666);text-align: center;">
+   الموقع
+    </div> -->
+    <div class="card-body row justify-content-between gallery ">  
+      <div class="map col-lg-3 col-md-6 col-xs-6 mb-2">
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54713.903654988244!2d31.342573619075704!3d31.00899986242976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f79ece19d7a94f%3A0x47fa9f1f8281e236!2z2KPZiNmK2LQg2KfZhNit2KzYsdiMINin2YTZhdmG2LXZiNix2KnYjCDYp9mE2K_ZgtmH2YTZitip!5e0!3m2!1sar!2seg!4v1674562336988!5m2!1sar!2seg" width="840" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div></div></div></div></div>
+
+     
+<!-- بدايه الفوتر -->
+<footer >
+  <div class="container p-4 bg-info" style="border-radius: 20px;">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0" dir="rtl">
+        <h5 class="" style="color:white;"> توعيات </h5>
+        <ul class="foott1" style="color:white;">
+          <li><a href="https://www.egypt.gov.eg/services/listServicesCategory.aspx?ID=1296&section=serviceproviders"
+              style="color:rgb(226, 240, 245);">وزاره الصحه</a></li>
+          <li><a
+              href="https://www.who.int/ar/news-room/questions-and-answers/item/vaccines-and-immunization-what-is-vaccination"
+              style="color:rgb(226, 240, 245);">التطعيمات</a></li>
+          <li><a href="https://www.moh.gov.sa/Support/FAQ/Pages/default.aspx"
+              style="color:rgb(226, 240, 245);">الاساله الشائعه</a></li>
+          <li><a href="https://www.unicef.org/egypt/ar/stories/national-immunization-campaign-against-polio"
+              style="color:rgb(226, 240, 245);">الحملات القوميه ضد شلل الاطفال</a></li>
+          <li><a href="" style="color:rgb(226, 240, 245);">فيس بوك</a></li>
+          <li><a
+              href="https://www.google.com/maps/place/%D9%85%D8%B1%D9%83%D8%B2+%D8%A7%D8%B3%D8%B1%D9%87+%D8%B7%D8%A8+%D8%A7%D9%88%D9%8A%D8%B4+%D8%A7%D9%84%D8%AD%D8%AC%D8%B1%E2%80%AD/@31.010662,31.3197579,15z/data=!4m5!3m4!1s0x0:0x2998f7bdd9e7b772!8m2!3d31.0106514!4d31.3197479"
+              style="color:rgb(226, 240, 245);">الموقع </a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0" dir="rtl">
+        <h5 class="" style="color:rgb(226, 240, 245);">نصائح </h5>
+        <ul class="foott2" style="color:rgb(226, 240, 245);">
+          <li><a href="https://egcovac.mohp.gov.eg/#/home" style="color:rgb(226, 240, 245);">وزاره الصحه لتلقي لقاح
+              فيروس كورونا</a></li>
+          <li> <a href="https://www.mayoclinic.org/ar/diseases-conditions/hepatitis-b/symptoms-causes/syc-20366802"
+              style="color:rgb(226, 240, 245);">الالتهاب الكبدي</a></li>
+          <li><a
+              href="https://www.moh.gov.sa/HealthAwareness/EducationalContent/Diseases/Infectious/Pages/default.aspx"
+              style="color:rgb(226, 240, 245);">الامراض المعديه</a></li>
+          <li><a
+              href="https://together.stjude.org/ar-sa/care-support/immunity-illness-infection/preventing-infection.html"
+              style="color:rgb(226, 240, 245);">الوقايه من العدوي</a></li>
+          <li><a href="https://www.moh.gov.bh/Services/EnvironmentalHealth" style="color:rgb(226, 240, 245);">صحه
+              البيئه</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-center container p-3 mt-0"
+    style="background-color:   rgb(31, 108, 141);color: white ;border-radius: 15px;width:100%">
+    © 2023 :
+    <a class="" href="https://mdbootstrap.com/" style="color: white;margin-right:20px ;">مركز طب الاسره</a>
+  </div>
+</footer>
+  <!--نهايه الفوتر -->
+
+  </div>
+
+
+
+
+
+
+
+    
+  <script src="{% static 'js/popper.min.js'%}"></script>
+  <script src="{% static 'js/jquery-3.6.3.min.js'%}"></script>
+      <script src="{% static 'js/bootstrap.js'%}"></script>
+        <script src="{% static 'mm.js'%}"></script>
+        <script src="{% static 'page.js'%}"></script>
+        <script src="{% static 'main.js'%}"></script>
+        <script src="{% static 'logd.js'%}"></script>
+        <script src="{% static 'page.js'%}"></script>
+    {% endblock  %} 

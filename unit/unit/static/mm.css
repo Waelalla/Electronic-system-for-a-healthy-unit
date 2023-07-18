@@ -1,0 +1,168 @@
+.carousel {
+   --max-height: 500px;
+   max-height: var(--max-height);
+}
+
+.carousel img {
+   max-height: var(--max-height);
+}
+
+.carousel button {
+   border: none;
+   background-color: transparent;
+}
+@media(max-width:991px){
+   .navbar-nav{
+      flex-direction: column-reverse;
+      padding: 10px;
+   }
+}
+body {
+   position: relative;
+}
+
+ul {
+   list-style: none;
+}
+
+#head1 {
+   padding: 10px;
+   text-align: right;
+   background-color: white;
+   border-radius: 15px;
+}
+
+#head1 a {
+   border-radius: 15px;
+}
+
+#head2 {
+
+   background-color: crimson;
+
+   border-radius: 15px;
+   display: flex;
+   align-items: center;
+   color: white;
+   width: 100%;
+   z-index: 100;
+
+}
+
+li {
+   text-decoration: none;
+   margin-left: 50px;
+   font-size: 14px;
+   transition: ease 1s;
+   color: white;
+
+}
+nav li{
+   margin-left:0;
+   text-align: right;
+}
+/* vdvnfdvnldfjnvlkdfvnldf */
+#fsec {
+   display: flex;
+
+
+   justify-content: center;
+   transform: translate(50);
+   align-items: center;
+   margin: 50px;
+   /* width: 1142px; */
+   text-align: right;
+   margin-top: 20px;
+   padding-top: 20px;
+   padding-bottom: 10px;
+   padding-right: 20px;
+   /* align-content: flex-start; */
+   border-radius: 15px;
+   padding-left: 100px;
+}
+
+/* vdvnfdvnldfjnvlkdfvnldf */
+
+h1 {
+   color: white;
+}
+
+#fsec {
+   color: white;
+}
+.unit-info{
+   padding: 20px;
+   border-radius: 15px;
+}
+.unit-info .lead,.unit-info .display-4{
+   text-align: right;
+}
+
+
+.container {
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+   padding: 0px 80px;
+   flex-wrap: wrap;
+
+   border-radius: 15px;
+   padding-bottom: 20px;
+
+}
+
+.news {
+
+   height: 550px;
+   display: flex;
+
+   /* justify-content: center; */
+   padding: 10px ;
+   flex-wrap: wrap;
+   background-color: crimson;
+   text-align: right;
+   margin-top: 150px;
+   padding-top: 20px;
+   border-radius: 15px;
+   padding-bottom: 15px;
+   margin-top: 60px;
+   width: 100%;
+
+}
+.news img{
+   width:100%;
+   object-fit: cover;
+}
+#img {
+   margin-top: -480px;
+   margin-right: 600px;
+   width: 400px;
+   height: 400px;
+   display: flex;
+
+
+}
+
+#call {
+   /* background-color: rgba(39, 104, 161, 0.666); */
+   /* padding: 10px 80px
+        ; */
+   color: white;
+   padding-top: 20px;
+   text-align: right;
+   margin-top: 50px;
+   padding-top: 20px;
+   border-radius: 15px;
+   padding-bottom: 15px;
+   margin-top: 15px;
+   width: 100%;
+}
+.about{
+   border-radius: 15px;
+}
+footer {
+   text-align: center;
+   background-color: white;
+
+   padding: 20px;
+}

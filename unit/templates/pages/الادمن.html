@@ -1,0 +1,103 @@
+{% extends 'base copy.html' %}
+{% load static %}
+{% block الادمن %}
+<link rel="stylesheet" href="{% static 'الادمن.css'%}">
+<style>
+  body{
+    text-align: right;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+
+{% comment %}
+
+<div>
+  <div class="form-inline my-2 my-lg-0">
+    <a class="nav-item nav-link active" href="#" style=" color: white; 
+ text-align: center;
+  background: rgba(39, 104, 161, 0.666);
+  border-radius: 12px;">الصفحه الرئيسيه</a>
+  </div> {% endcomment %}
+  <section>
+    
+    <div class="card text-white mb-3 " style="margin-top: 75px;  background: rgba(198, 196, 196, 0.85);border-radius:15px;
+    ">
+    <a type="button" class="btn btn-info" style="border-radius:5px;"href="{% url 'departments:التعديل_والحذف_للأقسام' %}"> الاقسام</a>
+
+      <div class="card-header toggle-btn" style="background-color: rgba(39, 104, 161, 0.666);text-align: center;">
+        اضافة قسم
+      </div>
+      <div class="card-body toggle-body " style=" text-align: end">
+        <form method="POST"enctype="multipart/form-data">
+          {% csrf_token %}
+
+          {{form_departmente}}
+          <button type="submit" class="btn btn-info" style="border-radius:5px;">اضافة</button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="card w-100 text-white mb-3 " style="margin-top: 75px;  background: rgba(198, 196, 196, 0.85);border-radius: 15px;
+    ">
+    <a type="button" class="btn btn-info" style="border-radius:5px;"href="{% url 'departments:التعديل_والحذف_للخدمات' %}">الخدمات </a>
+
+      <div class="card-header toggle-btn "
+        style="border-radius: 15px;background-color: rgba(39, 104, 161, 0.666);text-align: center;border-radius:15px">
+        اضافة خدمات
+      </div>
+      <div class="card-body toggle-body " style="border-radius:15px">
+        <form method="POST"enctype="multipart/form-data">
+          {% csrf_token %}
+
+          {{form_services}}
+          <button type="submit" class="btn btn-info" style="border-radius:5px;">اضافة</button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="card text-white mb-3 " style="margin-top: 40px;  background: rgba(198, 196, 196, 0.85);border-radius: 15px;
+    ">
+    <a type="button" class="btn btn-info" style="border-radius:5px;"href="{% url 'departments:التعديل_والحذف_للمنشورات' %}">المنشورات </a>
+
+      <div class="card-header toggle-btn" style="background-color: rgba(39, 104, 161, 0.666);text-align: center;">
+        اضافة منشور
+      </div>
+      <div class="card-body toggle-body" style=" text-align: end;">
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+      
+            {{form_post}}
+        <br> 
+              <button type="submit" class="btn btn-info" style="border-radius:5px;margin-right: 1200px;">اضافة</button>
+            </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.6.3.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'page.js' %}"></script>
+<script>
+  $('.toggle-btn').on('click', function () {
+    $(this).siblings('.toggle-body').slideToggle(200)
+  })
+</script>
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,133 @@
+{% extends 'base copy.html' %}
+{% load static %}
+
+{% block تسجيل_دخول_دكتور %}
+<link rel="stylesheet" href="{% static 'style.css'%}">
+<link rel="stylesheet" href="{% static 'footer.css'%}">
+{% endblock %}
+
+
+
+
+{% block content %}
+<div class="container">
+  <div class="main row">
+    <div class="col-lg-8 d-lg-block d-xs-none">
+      <img class="login-img" src="{% static 'images/55.png'%}">
+    </div>
+    <div class="login-type col-lg-4 col-md-12 text-center">
+      <div class="logo">
+        <img class="logo-img" src="{% static 'images/v1_13.png'%}">
+      </div>
+      <div class="login-roles d-flex justify-content-center">
+
+
+
+
+
+
+        <form class="doctor-login p-3" method="post" action="{% url 'accounts:main_login_' %}">
+          {% csrf_token %}
+
+          <div class="doctor-logo">
+            <img style="
+                  width: 145px;
+                  position: relative;
+                  top: -30px;" src="{% static 'images/v1_10.png'%}">
+          </div>
+          <div class="form-group w-100">
+            <input type="text" class="form-control" id="" aria-describedby="text" name="username"
+              placeholder="Username">
+          </div>
+
+          <div class="form-group w-100">
+            <input type="password" class="form-control" id="" name="password" placeholder="Password">
+          </div>
+          <input type="hidden" name="next" value="{{ next }}">
+          <input value="login" type="submit" type="submit" class="btn btn-info"> </input>
+        </form>
+        <p><a style="
+                bottom: 0;
+                width: 125px;
+                position: absolute;
+                right: 30%;" href="{% url 'password_reset' %}">Lost password?</a></p>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="container p-4  bg-info" style="border-radius: 20px; display: block;">
+      <div class="row foot1">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0" dir="rtl">
+          <h5 class="" style="color:white;"> توعيات </h5>
+          <ul style="color:white;">
+            <li><a href="https://www.egypt.gov.eg/services/listServicesCategory.aspx?ID=1296&section=serviceproviders"
+                style="color:rgb(226, 240, 245);">وزاره الصحه</a></li>
+            <li><a
+                href="https://www.who.int/ar/news-room/questions-and-answers/item/vaccines-and-immunization-what-is-vaccination"
+                style="color:rgb(226, 240, 245);">التطعيمات</a></li>
+            <li><a href="https://www.moh.gov.sa/Support/FAQ/Pages/default.aspx"
+                style="color:rgb(226, 240, 245);">الاساله الشائعه</a></li>
+            <li><a href="https://www.unicef.org/egypt/ar/stories/national-immunization-campaign-against-polio"
+                style="color:rgb(226, 240, 245);">الحملات القوميه ضد شلل الاطفال</a></li>
+            <li><a href="" style="color:rgb(226, 240, 245);">فيس بوك</a></li>
+            <li><a
+                href="https://www.google.com/maps/place/%D9%85%D8%B1%D9%83%D8%B2+%D8%A7%D8%B3%D8%B1%D9%87+%D8%B7%D8%A8+%D8%A7%D9%88%D9%8A%D8%B4+%D8%A7%D9%84%D8%AD%D8%AC%D8%B1%E2%80%AD/@31.010662,31.3197579,15z/data=!4m5!3m4!1s0x0:0x2998f7bdd9e7b772!8m2!3d31.0106514!4d31.3197479"
+                style="color:rgb(226, 240, 245);">الموقع </a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0" dir="rtl">
+          <h5 class="" style="color:rgb(226, 240, 245);">نصائح </h5>
+          <ul style="color:rgb(226, 240, 245);">
+            <li><a href="https://egcovac.mohp.gov.eg/#/home" style="color:rgb(226, 240, 245);">وزاره الصحه لتلقي لقاح
+                فيروس كورونا</a></li>
+            <li> <a href="https://www.mayoclinic.org/ar/diseases-conditions/hepatitis-b/symptoms-causes/syc-20366802"
+                style="color:rgb(226, 240, 245);">الالتهاب الكبدي</a></li>
+            <li><a
+                href="https://www.moh.gov.sa/HealthAwareness/EducationalContent/Diseases/Infectious/Pages/default.aspx"
+                style="color:rgb(226, 240, 245);">الامراض المعديه</a></li>
+            <li><a
+                href="https://together.stjude.org/ar-sa/care-support/immunity-illness-infection/preventing-infection.html"
+                style="color:rgb(226, 240, 245);">الوقايه من العدوي</a></li>
+            <li><a href="https://www.moh.gov.bh/Services/EnvironmentalHealth" style="color:rgb(226, 240, 245);">صحه
+                البيئه</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center container p-3 mt-0"
+      style="background-color:   rgb(31, 108, 141);color: white ;border-radius: 15px;width:100%; display: block;;">
+      © 2023 :
+      <a class="" href="https://mdbootstrap.com/" style="color: white;margin-right:20px ;">مركز طب الاسره</a>
+    </div>
+  </footer>
+  <!--نهايه الفوتر -->
+
+</div>
+
+
+
+
+
+
+
+
+<script src="{% static 'js/popper.min.js'%}"></script>
+<script src="{% static 'js/jquery-3.6.3.min.js'%}"></script>
+<script src="{% static 'js/bootstrap.js'%}"></script>
+<script src="{% static 'mm.js'%}"></script>
+<script src="{% static 'page.js'%}"></script>
+<script src="{% static 'main.js'%}"></script>
+<script src="{% static 'logd.js'%}"></script>
+<script src="{% static 'page.js'%}"></script>
+
+{% endblock %}

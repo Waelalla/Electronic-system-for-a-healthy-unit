@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/cairo.woff2') format('woff2');
+    unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+  }
+
+#head1 {
+    padding: 10px;
+    text-align: right;
+    background-color: white;
+    border-radius: 15px;
+}
+
+#head1 a {
+    border-radius: 15px;
+}
+
+#head2 {
+
+    background-color: crimson;
+    border-radius: 15px;
+
+    color: white;
+
+    width: 100%;
+    z-index: 100;
+
+}
+
+li {
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+    transition: ease 1s;
+    color: white;
+    display: block;
+
+}
+.card{
+    max-width:900px
+}
+footer {
+    text-align: center;
+    background-color: white;
+
+    padding: 20px;
+}

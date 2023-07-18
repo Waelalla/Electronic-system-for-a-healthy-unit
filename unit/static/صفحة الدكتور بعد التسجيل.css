@@ -1,0 +1,44 @@
+img {
+   width: 250px;
+}
+h3 {
+   width: 200px;
+   color: black;
+   text-align: center;
+   background-color: white;
+   border-radius: 15px;
+   height: 40px;
+}
+.card {
+   border-color: transparent;
+   background-color: #138496;
+   border-radius: 15px;
+   width: 350px;
+   height: 350px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.alert {
+   background-color: #138496;
+   color: white;
+   border-radius: 15px;
+}
+.button1 {
+   background-color: #138496 !important;
+}
+h5 {
+   right: 20px;
+   position: relative;
+}
+.about{
+   border-radius: 15px;
+}
+footer {
+   text-align: center;
+   background-color: white;
+   padding: 20px;
+}
+.foott1, .foott2 {
+   list-style: none;
+}

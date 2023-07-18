@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500&family=Oswald:wght@600&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,200;1,300&display=swap');
+
+#head2{
+   
+   background-color:crimson;
+  
+   border-radius: 15px;
+   display: flex; 
+   align-items: center;
+color: white;
+width: 100%;
+z-index: 100;
+ 
+}
+li{      
+       text-decoration: none;
+       display: block;
+       font-size: 14px;
+       transition: ease 1s;
+       color: white;
+   
+    }
+*{
+   font-family: 'cairo';
+   box-sizing: border-box;
+   margin: 0px ;
+   padding: 0px;
+}
+header{
+   
+
+background-color: rgba(47, 46, 46, 0.805);
+color: white;
+
+position: fixed;
+width: 100%;
+z-index: 100;
+}
+header a {
+   color: white;
+   text-decoration: none;
+   margin-right: 20px;
+   font-size: 20px;
+   transition: ease 1s;
+
+}
+#loog{
+  border-radius: 5px;
+  padding-right: 15px;
+}
+
+header a:hover{
+   color: #f91313;
+   font-size: 21px;
+   text-decoration: none;
+}
+.container{
+    font-size: 18px;
+    display: flex;
+    align-items:center;
+    color: black;
+    padding:  20px 80px;
+    padding-top: 100px;    
+}
+.btn {
+   border-radius: 15px;
+   color: white;
+}
+footer {
+   padding: 20px;
+   text-align: center;
+}
+footer .container {
+   border-radius: 15px;
+}
+.foot1 {
+   margin: auto;
+}

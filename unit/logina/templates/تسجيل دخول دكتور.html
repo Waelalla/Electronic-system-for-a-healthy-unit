@@ -1,0 +1,24 @@
+{% extends 'base copy.html' %}
+{% load static %}
+
+{% block activation %}
+<link rel="stylesheet" href="{% static 'segelat2.css'%}">
+<link rel="stylesheet" href="{% static 'footer.css'%}">
+
+{% endblock %}
+
+{% block content %}
+<div class="row mt-5 mb-5">
+  <div class="col-sm-6 col-md-4 col-lg-4">
+    <div class="box mb-3" data-work="Appliction">
+      <h3 style="padding-top: 50px">قم بادخال كود التفعيل</h3>
+      
+      <br />
+      <div class="col" style="width: 450px; border-radius: 25px">
+        {{form}}
+      </div>
+      <!-- <a class="btn rounded-pill main-btn" href="#">دخول</a>  -->
+    </div>
+  </div>
+</div>
+{% endblock %}

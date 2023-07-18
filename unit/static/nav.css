@@ -1,0 +1,18 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-left: 0;
+    text-align: right;
+}
+
+@media(min-width:992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}

@@ -1,0 +1,7 @@
+.toggle-btn{
+    cursor: pointer;
+    user-select: none;
+}
+.toggle-body{
+    display: none;
+}

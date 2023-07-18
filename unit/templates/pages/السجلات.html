@@ -1,0 +1,78 @@
+{% extends 'base copy.html' %}
+{% load static %}
+{% block السجلات %}
+<link rel="stylesheet" href="{% static 'السجلات.css'%}">
+<link rel="stylesheet" href="{% static 'footer.css'%}">
+{% endblock  %}
+{% block content %}
+
+<div class="search col-md-7 col-lg-7">
+  <form class="d-flex" role="search">
+    <input class="input form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btnn" style="background-color:rgba(39, 104, 161, 0.666);color: white;" type="submit">بحث</button>
+  </form>
+</div>
+
+<div class="row mt-5 mb-5">
+  {% for patient in patients %}
+  <div class="col-sm-6 col-md-4 col-lg-4">
+    <div class="box mb-3" data-work="Appliction">
+      <div class="pox">
+        <h6>{{patient.NationalId}}</h6> <h5>:الرقم القومي</h5>
+      </div>
+      <a class="btn rounded-pill main-btn" href="{% url 'accounts:profile' %}?username={{patient.user.username}}">دخول</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- بدايه الفوتر -->
+<footer >
+  <div class="container p-4 bg-info" style="border-radius: 20px;">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0" dir="rtl">
+        <h5 class="" style="color:white;"> توعيات </h5>
+        <ul class="foott1" style="color:white;">
+          <li><a href="https://www.egypt.gov.eg/services/listServicesCategory.aspx?ID=1296&section=serviceproviders"
+              style="color:rgb(226, 240, 245);">وزاره الصحه</a></li>
+          <li><a
+              href="https://www.who.int/ar/news-room/questions-and-answers/item/vaccines-and-immunization-what-is-vaccination"
+              style="color:rgb(226, 240, 245);">التطعيمات</a></li>
+          <li><a href="https://www.moh.gov.sa/Support/FAQ/Pages/default.aspx"
+              style="color:rgb(226, 240, 245);">الاساله الشائعه</a></li>
+          <li><a href="https://www.unicef.org/egypt/ar/stories/national-immunization-campaign-against-polio"
+              style="color:rgb(226, 240, 245);">الحملات القوميه ضد شلل الاطفال</a></li>
+          <li><a href="" style="color:rgb(226, 240, 245);">فيس بوك</a></li>
+          <li><a
+              href="https://www.google.com/maps/place/%D9%85%D8%B1%D9%83%D8%B2+%D8%A7%D8%B3%D8%B1%D9%87+%D8%B7%D8%A8+%D8%A7%D9%88%D9%8A%D8%B4+%D8%A7%D9%84%D8%AD%D8%AC%D8%B1%E2%80%AD/@31.010662,31.3197579,15z/data=!4m5!3m4!1s0x0:0x2998f7bdd9e7b772!8m2!3d31.0106514!4d31.3197479"
+              style="color:rgb(226, 240, 245);">الموقع </a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0" dir="rtl">
+        <h5 class="" style="color:rgb(226, 240, 245);">نصائح </h5>
+        <ul class="foott2" style="color:rgb(226, 240, 245);">
+          <li><a href="https://egcovac.mohp.gov.eg/#/home" style="color:rgb(226, 240, 245);">وزاره الصحه لتلقي لقاح
+              فيروس كورونا</a></li>
+          <li> <a href="https://www.mayoclinic.org/ar/diseases-conditions/hepatitis-b/symptoms-causes/syc-20366802"
+              style="color:rgb(226, 240, 245);">الالتهاب الكبدي</a></li>
+          <li><a
+              href="https://www.moh.gov.sa/HealthAwareness/EducationalContent/Diseases/Infectious/Pages/default.aspx"
+              style="color:rgb(226, 240, 245);">الامراض المعديه</a></li>
+          <li><a
+              href="https://together.stjude.org/ar-sa/care-support/immunity-illness-infection/preventing-infection.html"
+              style="color:rgb(226, 240, 245);">الوقايه من العدوي</a></li>
+          <li><a href="https://www.moh.gov.bh/Services/EnvironmentalHealth" style="color:rgb(226, 240, 245);">صحه
+              البيئه</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-center container p-3 mt-0"
+    style="background-color:   rgb(31, 108, 141);color: white ;border-radius: 15px;width:100%">
+    © 2023 :
+    <a class="" href="https://mdbootstrap.com/" style="color: white;margin-right:20px ;">مركز طب الاسره</a>
+  </div>
+</footer>
+  <!--نهايه الفوتر -->
+  {% endblock  %}

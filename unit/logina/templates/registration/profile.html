@@ -1,0 +1,415 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analysis</title>
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css'%}" />
+</head>
+
+<body>
+    <div class="d-flex flex-row-reverse">
+        <div class="main-right-section">
+            <nav>
+                <ul class="nav-links m-0">
+                    <ul class="d-flex flex-row-reverse" style="gap: 80px">
+                        <li class="nav-link">
+                            <a href="#"><img class="user-icon" src="{% static 'assets/imgs/account-circle.svg'%}"
+                                    alt="" /></a>
+                        </li>
+                        <a class="nav-link"href="{% url 'departments:home' %}">الصفحة الرئيسية</a>
+                    </ul>
+                    <li class="nav-link text-center nav-title" style="min-width: 250px">
+                        سجل تعريف شخصي
+                    </li>
+                    <li class="menu-icon" id="menuIcon">
+                        <img src="{% static 'assets/imgs/menu.svg'%}" alt="" />
+                    </li>
+                </ul>
+            </nav>
+            <div class="pages">
+                <div class="content profile">
+                    <div class="content-left-section bg-transparent">
+                        <div class="user-infos infos bg-white d-flex justify-content-between mb-3">
+                            <div class="left-section text-right p-3">
+                                <img src="{% static 'assets/imgs/profile-img.png'%}" alt="" />
+                                <div class="data">
+                                    <h5>{{profile.user}}</h5>
+                                    <h5>{{profile.age}} :<span>السن</span></h5>
+                                    <h5>{{profile.NationalId}} : <span>الرقم القومي</span></h5>
+                                </div>
+                            </div>
+                            <div class="right-section text-right p-3">
+                                <h5>{{profile.user.email}} : <span>الإيميل</span></h5>
+                                <h5>{{profile.phone}} : <span>الهاتف</span></h5>
+                                <h5>{{profile.address}} : <span>العنوان</span></h5>
+                            </div>
+                        </div>
+                        <div class="all-children bg-white infos">
+                            <h4 class="content-title">الأطفال</h4>
+                            <div class="children">
+                                {% for child in childs%}
+                                <div class="form-group child-form mb-0" dir="rtl">
+                                    <input type="text" class="form-control mb-2" placeholder="الإسم"
+                                        value="{{child.name}}" disabled />
+                                    <input type="text" class="form-control mb-2" placeholder="السن"
+                                        value="{{child.age}}" disabled />
+                                    <input type="text" class="form-control" placeholder="الرقم القومي"
+                                        value="{{child.national_id}}" disabled />
+                                    <hr />
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right-section" dir="rtl">
+                        <form class="pt-4" action="">
+                            <div class="form-group pl-5 pr-4">
+                                <label class="text-right d-block" for="">مستوى الضغط</label>
+                                <select class="p-2 w-100" name="" id="">
+                                    <option value="">طبيعي</option>
+                                    <option value="">منخفض</option>
+                                    <option value="">مرتفع</option>
+                                </select>
+                            </div>
+                            <div class="form-group pl-5 pr-4">
+                                <label class="text-right d-block" for="">مستوى السكر</label>
+                                <select class="form-control p-2 w-100" name="" id="">
+                                    <option value="">طبيعي</option>
+                                    <option value="">منخفض</option>
+                                    <option value="">مرتفع</option>
+                                </select>
+                            </div>
+                            <div class="form-group pl-5 pr-4">
+                                <label class="text-right d-block" for="">فصيلة الدم</label>
+                                <select class="form-control p-2 w-100" name="" id="">
+                                    <option value="">O+</option>
+                                    <option value="">A+</option>
+                                    <option value="">B+</option>
+                                    <option value="">AB+</option>
+                                    <option value="">O-</option>
+                                    <option value="">A-</option>
+                                    <option value="">B-</option>
+                                    <option value="">AB-</option>
+                                </select>
+                            </div>
+                            <div class="form-group pl-5 pr-4">
+                                <label class="text-right d-block" for="">أمراض وراثية</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                            <div class="form-group pl-5 pr-4">
+                                <label class="text-right d-block" for="">أمراض مزمنه </label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                            <div class="form-group pl-5 pr-4">
+                                <label class="text-right d-block" for="">أدويه</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                            {% if request_user.role == 'doctor' %}
+                            <div class="form-group pl-5 pr-4">
+                                <button class="btn btn-primary mt-2 w-50">إضافه</button>
+                            </div>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="content doeses">
+                    <div class="content-left-section">
+                        <h4 class="content-title">التطعيمات</h4>
+                        <div class="content-notes p-5">
+                            
+{% for Vaccinations in Vaccinationss %}
+<form class="pt-99" action="">
+<div class="d-flex justify-content-between flex-row-reverse">
+    <h4>
+        <span class="sub-title">نوع التطعيم: </span> "{{Vaccinations.vaccination_type}}"
+    </h4>
+    <h4><span class="sub-title">التاريخ: </span>"{{ Vaccinations.the_date }}"</h4>
+</div>
+<div class="mt-3">
+    <h4 class="text-right">
+        <span class="sub-title">الملاحظات:</span> {{Vaccinations.vaccination_type}}
+    </h4>
+</div>
+</form>
+{% endfor %}
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="content-right-section p-4">
+                        <form action="">
+                            <div class="form-group">
+                                <label class="text-right d-block" for="dose_type">نوع التطعيم</label>
+                                <input class="form-control" type="text" id="dose_type" name="dose_type" />
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">ملاحظة الطبيب</label>
+                                <textarea class="form-control" name="doctor_note" rows="13"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">الأدوية</label>
+                                <textarea class="form-control" name="treatment"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="text-right d-block">التاريخ</label>
+                                <input class="form-control" type="text" name="note_date" />
+                            </div>
+                            {% if request_user.role == 'doctor' %}
+                            <button class="btn btn-primary mt-2 w-50">إضافة</button>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+                <div class="content stomach">
+                    <div class="content-left-section">
+                        <h4 class="content-title">الباطنه</h4>
+                        <div class="content-notes p-5">
+                            <div class="d-flex justify-content-between flex-row-reverse">
+                                <h4>
+                                    <span class="sub-title">نوع الكشف: </span> تحاليل الدم
+                                </h4>
+                                <h4><span class="sub-title">التاريخ: </span> 19/4/2023</h4>
+                            </div>
+                            <div class="mt-3">
+                                <h4 class="text-right">
+                                    <span class="sub-title">الملاحظات:</span> ملاحظة
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right-section p-4">
+                        <form action="">
+                            <div class="form-group">
+                                <label class="text-right d-block" for="stomach">نوع الكشف</label>
+                                <input class="form-control" type="text" id="stomach" name="stomach" />
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">ملاحظة الطبيب</label>
+                                <textarea class="form-control" name="doctor_note" rows="13"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">الأدوية</label>
+                                <textarea class="form-control" name="treatment"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">التاريخ</label>
+                                <input class="form-control" type="text" name="note_date" />
+                            </div>
+                            {% if request_user.role == 'doctor' %}
+                            <button class="btn btn-primary mt-2 w-50">إضافة</button>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+                <div class="content eyes">
+                    <div class="content-left-section">
+                        <h4 class="content-title">الرمد</h4>
+                        <div class="content-notes p-5">
+                            <div class="d-flex justify-content-between flex-row-reverse">
+                                <h4>
+                                    <span class="sub-title">نوع الكشف: </span> تحاليل الدم
+                                </h4>
+                                <h4><span class="sub-title">التاريخ: </span> 19/4/2023</h4>
+                            </div>
+                            <div class="mt-3">
+                                <h4 class="text-right">
+                                    <span class="sub-title">الملاحظات:</span> ملاحظة
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right-section p-4">
+                        <form action="">
+                            <div class="form-group">
+                                <label class="text-right d-block">نوع الكشف</label>
+                                <input class="form-control" type="text" name="check_type" />
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">ملاحظة الطبيب</label>
+                                <textarea class="form-control" name="doctor_note" rows="13"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">الأدوية</label>
+                                <textarea class="form-control" name="treatment"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">التاريخ</label>
+                                <input class="form-control" type="text" name="note_date" />
+                            </div>
+                            {% if request_user.role == 'doctor' %}
+                            <button class="btn btn-primary mt-2 w-50">إضافة</button>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+                <div class="content rays">
+                    <div class="content-left-section">
+                        <h4 class="content-title">الأشعة</h4>
+                        <div class="content-notes p-5">
+                            <div class="d-flex justify-content-between flex-row-reverse">
+                                <h4>
+                                    <span class="sub-title">نوع الأشعة: </span> تحاليل الدم
+                                </h4>
+                                <h4><span class="sub-title">التاريخ: </span> 19/4/2023</h4>
+                            </div>
+                            <div class="mt-3">
+                                <h4 class="text-right">
+                                    <span class="sub-title">الملاحظات:</span> ملاحظة
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right-section p-4">
+                        <form action="">
+                            <div class="form-group">
+                                <label class="text-right d-block">نوع الكشف</label>
+                                <input class="form-control" type="text" name="check_type" />
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">ملاحظة الطبيب</label>
+                                <textarea class="form-control" name="doctor_note" rows="13"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">الأدوية</label>
+                                <textarea class="form-control" name="treatment"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">التاريخ</label>
+                                <input class="form-control" type="text" name="note_date" />
+                            </div>
+                            {% if request_user.role == 'doctor' %}
+                            <button class="btn btn-primary mt-2 w-50">إضافة</button>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+                <div class="content medical-tests">
+                    <div class="content-left-section">
+                        <h4 class="content-title">التحاليل</h4>
+                        <div class="content-notes p-5">
+                            <div class="d-flex justify-content-between flex-row-reverse">
+                                <h4>
+                                    <span class="sub-title">نوع التحاليل: </span> تحاليل الدم
+                                </h4>
+                                <h4><span class="sub-title">التاريخ: </span> 19/4/2023</h4>
+                            </div>
+                            <div class="mt-3">
+                                <h4 class="text-right">
+                                    <span class="sub-title">الملاحظات:</span> ملاحظة
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right-section p-4">
+                        <form action="">
+                            <div class="form-group">
+                                <label class="text-right d-block">نوع التحاليل</label>
+                                <input class="form-control" type="text" name="check_type" />
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">ملاحظة الطبيب</label>
+                                <textarea class="form-control" name="doctor_note" rows="13"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">الأدوية</label>
+                                <textarea class="form-control" name="treatment"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="text-right d-block">التاريخ</label>
+                                <input class="form-control" type="text" name="note_date" />
+                            </div>
+                            {% if request_user.role == 'doctor' %}
+                            <button class="btn btn-primary mt-2 w-50">إضافة</button>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+                <div class="content teeth">
+                    <div class="content-left-section">
+                        <h4 class="content-title">الأسنان</h4>
+                        <div class="content-notes p-5">
+                            <div class="d-flex justify-content-between flex-row-reverse">
+                                <h4>
+                                    <span class="sub-title">نوع الكشف: </span> تحاليل الدم
+                                </h4>
+                                <h4><span class="sub-title">التاريخ: </span> 19/4/2023</h4>
+                            </div>
+                            <div class="mt-3">
+                                <h4 class="text-right">
+                                    <span class="sub-title">الملاحظات:</span> ملاحظة
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right-section p-4">
+                        <form action="">
+                            <div class="form-group">
+                                <label class="text-right d-block">نوع الكشف</label>
+                                <input class="form-control" type="text" name="check_type" />
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">ملاحظة الطبيب</label>
+                                <textarea class="form-control" name="doctor_note" rows="13"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">الأدوية</label>
+                                <textarea class="form-control" name="treatment"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-right d-block">التاريخ</label>
+                                <input class="form-control" type="text" name="note_date" />
+                            </div>
+                            {% if request_user.role == 'doctor' %}
+                            <button class="btn btn-primary mt-2 w-50">إضافة</button>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-left-section">
+            <div class="sidebar" id="sidebar">
+                <ul class="tabs">
+                    <li class="tab" data-class=".profile" data-title="سجل تعريف شخصي">
+                        <a href="#"><img src="{% static 'assets/imgs/account-circle.svg'%}" alt="" /></a>
+                    </li>
+                    <li class="tab" data-class=".doeses" data-title="سجل التطعيمات">
+                        <a href="#"><img src="{% static 'assets/imgs/alternative-medicine.png'%}" alt="" /></a>
+                    </li>
+                    <li class="tab" data-class=".stomach" data-title="سجل الباطنة">
+                        <a href="#"><img src="{% static 'assets/imgs/health.png'%}" alt="" /></a>
+                    </li>
+                    <li class="tab" data-class=".eyes" data-title="سجل الرمد">
+                        <a href="#"><img src="{% static 'assets/imgs/medicine-(1).png'%}" alt="" /></a>
+                    </li>
+                    <li class="tab" data-class=".rays" data-title="سجل الأشعه">
+                        <a href="#"><img src="{% static 'assets/imgs/medicine.png'%}" alt="" /></a>
+                    </li>
+                    <li class="tab" data-class=".medical-tests" data-title="سجل التحاليل">
+                        <a href="#"><img src="{% static 'assets/imgs/personalized.png'%}" alt="" /></a>
+                    </li>
+                    <li class="tab" data-class=".teeth" data-title="سجل الأسنان">
+                        <a href="#"><img src="{% static 'assets/imgs/vaccine.png'%}" alt="" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'assets/js/popper.min.js'%}"></script>
+    <script src="{% static 'assets/js/jquery-3.6.3.min.js'%}"></script>
+    <script src="{% static 'assets/js/bootstrap.js'%}"></script>
+    <script src="{% static 'assets/js/main.js'%}"></script>
+</body>
+
+</html>

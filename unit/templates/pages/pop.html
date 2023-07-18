@@ -1,0 +1,70 @@
+
+    <!-- بدايه ناف بار تسجيل الدخول -->
+    <header id="head1">
+        <a href="#" class="btn btn-info" style="color: white;font-family: cairo;" role="button" aria-disabled="true">
+          تسجيل الدخول</a>
+             </header>
+             <!-- نهايه ناف بار تسجيل الدخول -->
+         
+             <!-- بدايه الناف بار للقوائم -->
+             <header class="bg-info"  id="head2" style="color: white;background-color: ; font-family: cairo;" >
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <h4 style="background-color: rgba(39, 104, 161, 0.666);padding:12px 20px 12px 20px ;position: absolute;top: 0.2px;left: 0px; border-radius: 15px;">
+                  مركز طب اسرة اويش الحجر
+                     </h4>
+                     <div class="collapse navbar-collapse" id="nn" style="padding-left:400px;">
+                       <ul class="navbar-nav "  >
+                      
+                         <li class="nav-item">
+                           <a class="nav-link text-white" href="#">التواصل</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link text-white" href="#">نبذة عن</a>
+                         </li>
+                         <li class="nav-item ">
+                             <a class="nav-link text-white" href="#">السجلات <span class="sr-only">(current)</span></a>
+                           </li>
+                         <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             المبادرات 
+                           </a>
+                           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                             {% for initiatives in initiativess %}
+                             <a class="dropdown-item" href="#"> {{initiatives.name_Services }} </a>
+                             {% endfor %}
+  
+                           </div>
+                           <li class="nav-item dropdown">
+                             <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               الخدمات 
+                             </a>
+                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                               {% for Services in Servicess %}
+                               <a class="dropdown-item" href="#">{{Services.name_Services}}</a>
+                               {% endfor %}
+  
+                             </div>
+                             <li class="nav-item dropdown">
+                                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   الاقسام 
+                                 </a>
+                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                   {% for sectionss in sectionss %}
+  
+                                   <a class="dropdown-item" href="#">{{sectionss.name_sections}}</a>
+                                   {% endfor %}
+  
+                                  
+                                 </div>
+                      
+                          
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link text-white" href="#">الصفحه الرئيسيه</a>
+                           </li>
+                       </ul>
+                     </div>
+                   </nav>
+             </header>
+             <!-- نهايه ناف بار القوائم -->
+

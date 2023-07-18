@@ -1,0 +1,319 @@
+{% load static %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <style>
+      .card {
+        overflow: hidden;
+      }
+  
+      .carousel-item {
+        height: 500px;
+      }
+  
+      .carousel-item img {
+        height: inherit;
+      }
+  
+      .videos video {
+        max-height: 400px;
+        
+      }
+      .videos > div{
+        margin-top:20px;
+        margin-bottom:20px
+      }
+  
+      @media(max-width:800px) {
+        .carousel-item {
+          height: 400px;
+        }
+      }
+  
+      @media(max-width:600px) {
+        .carousel-item {
+          height: 250px;
+        }
+      }
+  
+    </style>
+    <body style="font-family: cairo;(188, 221, 236)">
+
+
+   
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500&family=Oswald:wght@600&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,200;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --main-color:#17a2b8;
+  }
+  .img-bg{
+    background-color: var(--main-color);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 50%;
+    width:75px;
+    height: 75px;
+    text-align: center;
+  }
+  .img-bg img{
+    width:100%;
+    height: 100%;
+  }
+  .health-logo{
+    padding: 10px;
+  }
+  .health-logo img{
+    width: 75px;
+    height: 75px;
+  }
+</style>    
+<title>الصفحة الرئيسية</title>
+</head>
+<body style="font-family: cairo;">
+
+
+
+
+
+
+  <!-- بدايه ناف بار تسجيل الدخول والصفحه الرئيسيه-->
+  <div style="display: flex; justify-content: space-between; padding: 10px;">
+    <div style="width: 350px; margin: 5px; display: flex; justify-content: space-between; text-align: center; color: #17a2b8;">
+      <div class="cont d-flex flex-column align-items-center">
+        <div class="img-bg">
+          <img src="{% static 'images/door-7-xxl.png'%}"href="{% url 'departments:الجميع' %}" style=" border-radius: 50%;" alt="">
+        </div>
+        <h4>
+          <a style="color: #17a2b8; text-decoration: none;" href="{% url 'departments:الجميع' %}">تسجيل الدخول</a>
+        </h4>
+      </div>
+      <div class="cont d-flex flex-column align-items-center">
+        <div class="img-bg ">
+          <img src="{% static 'images/home.jpg'%}"  href="{% url 'departments:home' %}" style=" border-radius: 50%">
+        </div>
+        <h4>
+          <a style="color: #17a2b8; text-decoration: none;" href="{% url 'departments:home' %}">الصفحة الرئيسية</a>
+        </h4>
+      </div>
+    </div>
+      <div class="health-logo">
+        <img src="{% static 'images/ffddcb94-2d86-4eeb-8c1f-b7b2bc03114b.jpg'%}" style=""alt="">
+      </div>
+      
+  </div>
+    <!-- نهاية ناف بار تسجيل الدخول والصفحه الرئيسيه-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-info  p-0 w-100" >
+    <a class="navbar-brand text-white" href="#">
+      <h4 style="background-color: rgba(39, 104, 161, 0.666);padding:12px 20px 12px 20px ;margin-bottom: 0; border-radius: 15px;">
+          مركز طب اسرة اويش الحجر
+        </h4>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="flex-direction: row-reverse;" >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="{% url 'logout' %}" class="nav-link text-white" style="color: white;font-family: cairo;" role="button" aria-disabled="true">
+            تسجيل الخروج</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'departments:التواصل' %}">التواصل</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'departments:نبذة_عن' %}">نبذة عن</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="{% url 'departments:السجلات' %}">السجلات <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="{% url 'departments:admin' %}">الادارة <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            المبادرات
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            {% for initiatives in initiativess %}
+            <a class="dropdown-item" href="#"> {{initiatives.name_Services }} </a>
+            {% endfor %}
+
+          </div>
+
+
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="{% url 'departments:department_list' %}">الاقسام <span class="sr-only">(current)</span></a>
+          </li>
+
+        </li>
+
+      </ul>
+      
+    </div>
+  </nav>
+
+           <!-- اشتغل هنااا    -->
+       
+<!--############الاساسي#################-->
+
+{% block content %}
+
+{% endblock %}
+<!--#############الصفحة الرئيسيه################-->
+
+{% block home %}
+
+{% endblock  %}
+
+<!--###############التطعيمات##############-->
+
+{% block التطعيمات %}
+
+{% endblock  %}
+
+<!--##############الرائده الريفية###############-->
+
+{% block دليل_الرائدة_الريفية %}
+
+
+{% endblock  %}
+
+<!--###############التواصل##############-->
+
+{% block التواصل %}
+
+{% endblock  %}
+
+<!--##############الاقسام###############-->
+
+{% block department_detail %}
+
+{% endblock  %}
+
+<!--##############الاقسام###############-->
+
+{% block department_list %}
+
+{% endblock  %}
+
+<!--############الخدمات#################-->
+
+{% block services_Detail %}
+
+{% endblock  %}
+
+<!--#############الخدمات################-->
+
+{% block services_list %}
+
+{% endblock  %}
+
+<!--#############################-->
+
+{% block تسجيل_دخول_دكتور %}
+
+{% endblock  %} 
+
+<!--#############################-->
+
+{% block نبذة_عن  %}
+
+{% endblock  %} 
+
+<!--#############################-->
+
+{% block الادمن %}
+
+{% endblock  %} 
+
+<!--#############################-->
+
+{% block الجميع %}
+
+{% endblock  %} 
+
+<!--#############################-->
+
+{% block التعديل_والحذف_للأقسام %}
+
+{% endblock  %}
+
+<!--#############################-->
+
+<!--#############################-->
+
+{% block التعديل_والحذف_للخدمات %}
+
+{% endblock  %}
+
+<!--#############################-->
+
+<!--#############################-->
+
+{% block التعديل_والحذف_للمنشورات %}
+
+{% endblock  %}
+
+<!--#############################-->
+
+{% block السجلات %}
+
+{% endblock  %}
+
+<!--#############################-->
+
+{% block صفحة_الدكتور_بعد_التسجيل %}
+
+{% endblock  %}
+
+<!--#############################-->
+{% block activation %}
+
+{% endblock %}
+
+
+{% block password_reset_form %}
+
+{% endblock %}
+
+<!-- خلص هنااا   -->
+
+
+
+</html>       

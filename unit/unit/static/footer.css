@@ -1,0 +1,15 @@
+h5 {
+   right: 20px;
+   position: relative;
+}
+.about{
+   border-radius: 15px;
+}
+footer {
+   text-align: center;
+   background-color: white;
+   padding: 20px;
+}
+.foott1, .foott2 {
+   list-style: none;
+}

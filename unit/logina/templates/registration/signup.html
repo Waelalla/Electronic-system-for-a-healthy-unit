@@ -1,0 +1,151 @@
+{% extends 'base copy.html' %}
+{% load static %}
+
+{% block p2 %}
+<link rel="stylesheet" href="{% static 'page.css'%}">
+<link rel="stylesheet" href="{% static 'footer.css'%}">
+
+{% endblock %}
+
+{% block content %}
+
+<section class="container" >
+<form method="post" dir="rtl">
+  {% csrf_token %}
+{% csrf_token %}
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+            <label for="validationServer01" dir="rtl">الاسم</label>
+            <input type="text" class="form-control is-valid" name="username" id="validationServer01" placeholder="الاسم"  required>
+            <input type="email" class="form-control is-valid"  name="email" id="validationServer06" placeholder="الايمل" required>
+            <input type="password" class="form-control is-valid" name="password1" id="validationServer07" placeholder="الرقم السري"  required>
+            <input type="password" class="form-control is-valid" name="password2" id="validationServer08" placeholder="تاكيد الرقم السري"  required>
+            <input type="tel" class="form-control is-valid" name="phone" id="validationServer08" placeholder="رقم الهاتف" required>
+            <input type="file" class="form-control-file is-valid" name="image" id="validationServer09" required>
+
+
+           </div>
+
+           <div class="col-md-4 mb-3">
+            <label for="validationDefault02" dir="rtl">السن</label>
+            <input type="number" class="form-control" id="validationDefault02" placeholder="السن" name="age" required>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="validationServer01" dir="rtl">الرقم القومي</label>
+            <input type="text" class="form-control is-valid" id="validat1" placeholder="الرقم القومي" name="NationalId" required>
+          </div>
+         <br>
+      
+        
+         <label for="validationDefault03">العنوان</label>
+         <input type="text" class="form-control" id="validationDefault03" placeholder="العنوان" name="address" required>
+       </div><br>
+       <select class="custom-select" id="story" onchange="stor()" dir="rtl" name="marital_status">
+         <option selected >الحاله الاجتماعيه</option>
+         <option value="1">اعزب</option>
+         <option value="2">متزوج</option>
+         <option value="3">مطلق</option>
+         <option value="4">ارمل</option>
+       </select>
+       <br>
+       <br>
+          
+          <div class="form-row" id="uu1">
+  
+          <div class="col-md-4 mb-3" >
+            <label for="validationDefault02" dir="rtl">عدد الابناء</label>
+            <input type="number" class="form-control mb-2" id="sons" placeholder="عدد الابناء" name="sons_cont"  onchange="cn()">
+            <div class="form-group sons"></div>
+          </div>
+          <div class="col-md-4 mb-3" >
+            <label for="validationDefault02"  dir="rtl">عدد الذكور</label>
+            <input type="number" class="form-control mb-2" id="boys" placeholder="عدد الذكور" name="man_cont" >
+            <div class="form-group boys"></div>
+          </div>
+          <div class="col-md-4 mb-3" >
+            <label for="validationDefault02"  dir="rtl">عدد الاناث</label>
+            <input type="number" class="form-control mb-2" id="girls" placeholder="عدد الاناث" name="girl_cont" >
+            <div class="form-group girls"></div>
+          </div>
+          </div>
+      <!-- <div class="col-md-4 mb-3" id="ff" > -->
+            
+
+      <button class="btn btn-info" type="submit" style="border-radius: 15px;color: white;">تسجيل البيانات </button>
+      <button class="btn btn-info" href="#" style="border-radius: 15px;color: white;"> دخول </button>
+
+      </form>
+    </section>
+
+    
+<!-- بدايه الفوتر -->
+<footer >
+  <div class="container p-4 bg-info" style="border-radius: 20px;">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0" dir="rtl">
+        <h5 class="" style="color:white;"> توعيات </h5>
+        <ul class="foott1" style="color:white;">
+          <li><a href="https://www.egypt.gov.eg/services/listServicesCategory.aspx?ID=1296&section=serviceproviders"
+              style="color:rgb(226, 240, 245);">وزاره الصحه</a></li>
+          <li><a
+              href="https://www.who.int/ar/news-room/questions-and-answers/item/vaccines-and-immunization-what-is-vaccination"
+              style="color:rgb(226, 240, 245);">التطعيمات</a></li>
+          <li><a href="https://www.moh.gov.sa/Support/FAQ/Pages/default.aspx"
+              style="color:rgb(226, 240, 245);">الاساله الشائعه</a></li>
+          <li><a href="https://www.unicef.org/egypt/ar/stories/national-immunization-campaign-against-polio"
+              style="color:rgb(226, 240, 245);">الحملات القوميه ضد شلل الاطفال</a></li>
+          <li><a href="" style="color:rgb(226, 240, 245);">فيس بوك</a></li>
+          <li><a
+              href="https://www.google.com/maps/place/%D9%85%D8%B1%D9%83%D8%B2+%D8%A7%D8%B3%D8%B1%D9%87+%D8%B7%D8%A8+%D8%A7%D9%88%D9%8A%D8%B4+%D8%A7%D9%84%D8%AD%D8%AC%D8%B1%E2%80%AD/@31.010662,31.3197579,15z/data=!4m5!3m4!1s0x0:0x2998f7bdd9e7b772!8m2!3d31.0106514!4d31.3197479"
+              style="color:rgb(226, 240, 245);">الموقع </a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0" dir="rtl">
+        <h5 class="" style="color:rgb(226, 240, 245);">نصائح </h5>
+        <ul class="foott2" style="color:rgb(226, 240, 245);">
+          <li><a href="https://egcovac.mohp.gov.eg/#/home" style="color:rgb(226, 240, 245);">وزاره الصحه لتلقي لقاح
+              فيروس كورونا</a></li>
+          <li> <a href="https://www.mayoclinic.org/ar/diseases-conditions/hepatitis-b/symptoms-causes/syc-20366802"
+              style="color:rgb(226, 240, 245);">الالتهاب الكبدي</a></li>
+          <li><a
+              href="https://www.moh.gov.sa/HealthAwareness/EducationalContent/Diseases/Infectious/Pages/default.aspx"
+              style="color:rgb(226, 240, 245);">الامراض المعديه</a></li>
+          <li><a
+              href="https://together.stjude.org/ar-sa/care-support/immunity-illness-infection/preventing-infection.html"
+              style="color:rgb(226, 240, 245);">الوقايه من العدوي</a></li>
+          <li><a href="https://www.moh.gov.bh/Services/EnvironmentalHealth" style="color:rgb(226, 240, 245);">صحه
+              البيئه</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-center container p-3 mt-0"
+    style="background-color:   rgb(31, 108, 141);color: white ;border-radius: 15px;width:100%">
+    © 2023 :
+    <a class="" href="https://mdbootstrap.com/" style="color: white;margin-right:20px ;">مركز طب الاسره</a>
+  </div>
+</footer>
+  <!--نهايه الفوتر -->
+
+    </div>
+  
+  
+  
+  
+  
+  
+  
+      
+    <script src="{% static 'js/popper.min.js'%}"></script>
+    <script src="{% static 'js/jquery-3.6.3.min.js'%}"></script>
+        <script src="{% static 'js/bootstrap.js'%}"></script>
+          <script src="{% static 'mm.js'%}"></script>
+          <script src="{% static 'page.js'%}"></script>
+          <script src="{% static 'main.js'%}"></script>
+          <script src="{% static 'logd.js'%}"></script>
+          <script src="{% static 'page.js'%}"></script>
+{% endblock  %} 
+
+</html>
